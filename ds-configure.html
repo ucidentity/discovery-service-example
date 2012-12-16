@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>UCSF Salesforce</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="css/select2.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+            <a href="" class="brand">UCSF Salesforce</a>
+            <div class="nav-collapse">
+                
+            </div><!--/.nav-collapse -->
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row-fluid">
+            <div class="span1"></div>
+            <div class="span11">
+                <form method="post">
+                    <fieldset>
+                        <legend>Configure Identity Discovery Service</legend>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <a data-toggle="modal" href="#selectProviderPreview" title="Click for preview" class="btn btn-info pull-right btn-small">Preview</a>
+                            <p>Select which Higher Education and Social Providers (if any) you would like to use for this Salesforce org or portal app.</p>
+                            
+                            </div>
+                            <div class="span5">
+                                <h2>Higher Eduction Providers</h2>
+                            
+                                <div class="provider-overflow">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="harvard" class="he-provider" checked> <img src="images/icons/harvard.png" /> Harvard
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="osu" class="he-provider"> <img src="images/icons/osu.png" /> Ohio State University
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="psu" class="he-provider" checked> <img src="images/icons/psu.png" /> Penn State University
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="rutgers" class="he-provider"> <img src="images/icons/rutgers.png" /> Rutgers
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="stanford" class="he-provider" checked> <img src="images/icons/stanford.png" /> Stanford
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="berkeley" class="he-provider" checked> <img src="images/icons/berkeley.png" /> UC Berkeley
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="ucdavis" class="he-provider" checked> <img src="images/icons/ucdavis.png" /> UC Davis
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="uci" class="he-provider"> <img src="images/icons/uci.png" /> UC Irvine
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="ucla" class="he-provider" checked> <img src="images/icons/ucla.png" /> UC Los Angeles
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="ucmerced" class="he-provider"> <img src="images/icons/ucmerced.png" /> UC Merced
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="ucr" class="he-provider"> <img src="images/icons/ucr.png" /> UC Riverside
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="ucsd" class="he-provider"> <img src="images/icons/ucsd.png" /> UC San Diego
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="ucsf" class="he-provider" checked> <img src="images/icons/ucsf.png" /> UC San Francisco
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="ucsb" class="he-provider"> <img src="images/icons/ucsb.png" /> UC Santa Barbara
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="ucsc" class="he-provider"> <img src="images/icons/ucsc.png" /> UC Santa Cruz
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="uchicago" class="he-provider"> <img src="images/icons/uchicago.png" /> University of Chicago
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="washington" class="he-provider"> <img src="images/icons/washington.png" /> University of Washington
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="yale" class="he-provider" checked> <img src="images/icons/yale.png" /> Yale
+                                    </label>
+                                </div>
+                                <span class="help-block">These providers come from the <a href="http://www.incommon.org/federation/metadata.html" target="_blank">Incommon Metadata</a>.</span>
+                            </div> <!-- End span5 for Higher Ed Providers -->
+                            <div class="span5">
+                                <h2>Social Providers</h2>
+                                <div class="provider-overflow">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="facebook" class="social-provider" checked> <img src="images/icons/facebook.png" /> Facebook
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="google" class="social-provider"> <img src="images/icons/google.png" /> Google
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="linkedin" class="social-provider" checked> <img src="images/icons/linkedin.png" /> LinkedIn
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="twitter" class="social-provider"> <img src="images/icons/twitter.png" /> Twitter
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="live" class="social-provider"> <img src="images/icons/live.png" /> Windows Live
+                                    </label>
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="yahoo" class="social-provider"> <img src="images/icons/yahoo.png" /> Yahoo!
+                                    </label>
+                                </div>
+                            </div> <!-- End span5 Social Providers -->
+                        </div> <!-- End row-fluid-->
+                        
+                        <hr />
+                        <input type="submit" class="btn btn-primary" value="Save" tabindex="3" /> &nbsp; &nbsp; 
+                        <input type="reset" class="btn" value="Reset" tabindex="3" />
+                        <input type="reset" class="btn btn-danger btn-small pull-right" value="Clear All"/>
+                    </fieldset>
+                </form>
+                
+                <div class="modal hide" id="selectProviderPreview">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                        <h3>"Login Options" Preview</h3>
+                      </div>
+                      <div class="modal-body">
+                          <fieldset>
+                              <p>
+                              <label for="options">Choose Your School or Social Provider</label>
+                              <select id="e2" style="width:300px" name="options" class="populate placeholder" tabindex="1">
+                                  <optgroup label="Higher Ed">
+                                      <option value="ucsf"> UC San Francisco</option>
+                                      <option value="harvard"> Harvard</option>
+                                      <option value="stanford"> Stanford</option>
+                                      <option value="psu"> Penn State University</option>
+                                      <option value="berkeley"> UC Berkeley</option>
+                                      <option value="ucla"> UC Los Angeles</option>
+                                      <option value="ucsd"> UC San Diego</option>
+
+                                      <option value="yale"> Yale</option>
+                                  </optgroup>
+                                  <optgroup label="Social Providers">
+                                      <option value="facebook"> Facebook</option>
+                                      <option value="linkedin"> LinkedIn</option>
+                                  </optgroup>
+                              </select>
+                              </p>
+                          </fieldset>
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#" class="btn btn-small btn-primary" data-dismiss="modal">Close</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div><!-- End container -->
+
+<script>
+$("#e2").select2({
+    placeholder: "Select Your School or Social Provider",
+    allowClear: true,
+    formatResult: format,
+    formatSelection: format
+});
+
+function format(provider) {
+    if (!provider.id) return provider.text; // optgroup
+    return "<img class='flag' src='images/icons/" + provider.id.toLowerCase() + ".png'/>" + provider.text;
+}
+
+$('#remember').tooltip('hide')
+
+</script>
+
+  </body>
+</html>
+

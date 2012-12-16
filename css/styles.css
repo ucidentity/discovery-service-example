@@ -1,0 +1,31 @@
+p {
+    line-height: 1.2em;
+}
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+form h2 {
+    font-size: 1.2em;
+}
+
+.provider-overflow {
+    height: 300px;
+    overflow: auto;
+    padding-left: 20px;
+}
+
+.right-border {
+    border-right: 1px solid #ababab;
+}
+
+.left-border {
+    border-left: 1px solid #ababab;
+}
+
+/* Allow CSS3 and iOS 5+ to scroll the overflow-ed div. */
+-webkit-overflow-scrolling: touch;
